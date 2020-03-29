@@ -1,0 +1,14 @@
+set up on the X11 NOT to use Nvidia so we get all the memory:
+
+add the following to /etc/X11/xorg.conf
+
+Section "Device"
+    Identifier      "intel"
+    Driver          "intel"
+    BusId           "PCI:0:2:0"
+EndSection
+
+Section "Screen"
+    Identifier      "intel"
+    Device          "intel"
+EndSection
